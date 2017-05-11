@@ -126,11 +126,11 @@
     <AndroidResource Include="Resources\layout\MainFragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-hdpi\buildheader.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\buildheader.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\buildheader.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\buildheader.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\buildheader.png" />
+    <None Include="Resources\drawable-hdpi\buildheader.png" />
+    <None Include="Resources\drawable-mdpi\buildheader.png" />
+    <None Include="Resources\drawable-xhdpi\buildheader.png" />
+    <None Include="Resources\drawable-xxhdpi\buildheader.png" />
+    <None Include="Resources\drawable-xxxhdpi\buildheader.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -140,6 +140,21 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\buildheader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\buildheader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\buildheader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\buildheader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\buildheader.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
