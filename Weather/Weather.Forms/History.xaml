@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Forms.History" BackgroundColor="#002050">
+    <StackLayout VerticalOptions="Fill">
+        <StackLayout.Margin>
+            <OnIdiom x:TypeArguments="Thickness">
+                <OnIdiom.Phone>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="10,80,10,10"></On>
+                        <On Platform="WinRT, UWP, Android" Value="10"></On>
+                    </OnPlatform>
+                </OnIdiom.Phone>
+                <OnIdiom.Tablet>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="10,80,10,10"></On>
+                        <On Platform="WinRT, UWP, Android" Value="10"></On>
+                    </OnPlatform>
+                </OnIdiom.Tablet>
+                <OnIdiom.Desktop>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="WinRT, UWP" Value="20"></On>
+                    </OnPlatform>
+                </OnIdiom.Desktop>
+            </OnIdiom>
+        </StackLayout.Margin>
+        <Label Text="Your Places">
+            <Label.TextColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="GhostWhite"></On>
+                        <On Platform="UWP, iOS" Value="White"></On>
+                    </OnPlatform>
+            </Label.TextColor>
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="24"></On>
+                    <On Platform="WinRT, UWP, Android" Value="18"></On>
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+        <ListView x:Name="HistoryItems" VerticalOptions="Fill">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding WeatherIcon}" Grid.Column="0" VerticalTextAlignment="Center" TextColor="White">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="UWP" Value="/Assets/WeatherIcons.ttf#Weather Icons"></On>
+                                        <On Platform="iOS" Value="Weather Icons"></On>
+                                        <On Platform="Android" Value="WeatherIcons.ttf#Weather Icons"></On>
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="iOS" Value="18"></On>
+                                        <On Platform="WinRT, UWP, Android" Value="18"></On>
+                                    </OnPlatform>
+                                </Label.FontSize>
+                            </Label>
+                            <Label Text="{Binding LocationName}" Grid.Column="1" VerticalOptions="Center" TextColor="White">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="iOS" Value="18"></On>
+                                        <On Platform="WinRT, UWP, Android" Value="14"></On>
+                                    </OnPlatform>
+                                </Label.FontSize>
+                            </Label>
+                            <Label Text="{Binding PostalCode}" VerticalOptions="Center" TextColor="White" Grid.Column="2" VerticalTextAlignment="Center">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="iOS" Value="18"></On>
+                                        <On Platform="WinRT, UWP, Android" Value="14"></On>
+                                    </OnPlatform>
+                                </Label.FontSize>
+                            </Label>
+                            
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="{Binding PlatformName}" TextColor="White" VerticalTextAlignment="Center">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="24"></On>
+                        <On Platform="WinRT, UWP, Android" Value="18"></On>
+                    </OnPlatform>
+                </Label.FontSize>
+            </Label>
+            <Label TextColor="Red" VerticalTextAlignment="Center">
+                <Label.Text>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="&#xEB52;"></On>
+                        <On Platform="iOS" Value="&#xf004;"></On>
+                        <On Platform="Android" Value="&#xf004;"></On>
+                    </OnPlatform>
+                </Label.Text>
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="24"></On>
+                        <On Platform="WinRT, UWP, Android" Value="18"></On>
+                    </OnPlatform>
+                </Label.FontSize>
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
+                        <On Platform="iOS" Value="FontAwesome"></On>
+                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label Text=" Xamarin.Forms" VerticalTextAlignment="Center" TextColor="White">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="24"></On>
+                        <On Platform="WinRT, UWP, Android" Value="18"></On>
+                    </OnPlatform>
+                </Label.FontSize>
+            </Label>
+        </StackLayout>
+        
+        
+    </StackLayout>
+</ContentPage>
