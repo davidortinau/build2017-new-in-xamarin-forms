@@ -25,6 +25,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -91,6 +92,7 @@
     </ProjectReference>
     <ProjectReference Include="..\WeatherApp\WeatherApp.csproj">
       <Name>WeatherApp</Name>
+      <Project>{247CE0B4-3B55-4868-AEFC-5F9134769971}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +170,7 @@
     <BundleResource Include="Resources\WeatherIcons.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\buildheader.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -176,6 +179,9 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\buildheader.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.0.8\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.0.8\build\netstandard1.0\Xamarin.Forms.targets')" />

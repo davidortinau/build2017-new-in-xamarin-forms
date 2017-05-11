@@ -105,6 +105,7 @@
     </ProjectReference>
     <ProjectReference Include="..\WeatherApp\WeatherApp.csproj">
       <Name>WeatherApp</Name>
+      <Project>{247CE0B4-3B55-4868-AEFC-5F9134769971}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +126,11 @@
     <AndroidResource Include="Resources\layout\MainFragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\buildheader.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\buildheader.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\buildheader.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\buildheader.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\buildheader.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -135,7 +141,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

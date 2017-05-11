@@ -1,6 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="buildheader.png"
              x:Class="Weather.Forms.History" BackgroundColor="#002050">
     <StackLayout VerticalOptions="Fill">
         <StackLayout.Margin>
@@ -24,6 +25,7 @@
                 </OnIdiom.Desktop>
             </OnIdiom>
         </StackLayout.Margin>
+        <BoxView HeightRequest="120"/>
         <Label Text="Your Places">
             <Label.TextColor>
                     <OnPlatform x:TypeArguments="Color">
@@ -38,7 +40,7 @@
                 </OnPlatform>
             </Label.FontSize>
         </Label>
-        <ListView x:Name="HistoryItems" VerticalOptions="Fill">
+        <ListView x:Name="HistoryItems" VerticalOptions="Fill" BackgroundColor="Transparent">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
