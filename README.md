@@ -7,7 +7,7 @@ Xamarin.Forms services such as DependencyService and MessagingCenter work with t
 
 **NOTE:** This is an early preview and not all features have been evaluated.
 
-[Watch the presentation](https://channel9.msdn.com/events/Build/2017/B8099) and view the slides on Channel 9.
+[Watch the presentation](https://channel9.msdn.com/events/Build/2017/B8099) and [view the slides](http://view.officeapps.live.com/op/view.aspx?src=https%3a%2f%2fsec.ch9.ms%2fsessions%2fc1f9c808-82bc-480a-a930-b340097f6cc1%2fbuild%2f2017%2fB8099.pptx) on Channel 9.
 
 ## Android
 ![](art/embedding-android.gif)
