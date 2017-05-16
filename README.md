@@ -8,7 +8,8 @@ Xamarin.Forms services such as DependencyService and MessagingCenter work with t
 ## Android
 ![](art/embedding-android.gif)
 
-```public void ShowHistory()
+```
+public void ShowHistory()
 		{
 			if (_history == null)
 			{
@@ -30,9 +31,11 @@ Xamarin.Forms services such as DependencyService and MessagingCenter work with t
 
 ## iOS
 ![](art/embedding-ios.gif)
+
 Call `Forms.Init()` before creating the UIViewController.
 
-```public void ShowHistory()
+```
+public void ShowHistory()
 		{
 			if (_history == null)
 			{
@@ -47,6 +50,9 @@ Call `Forms.Init()` before creating the UIViewController.
 
 ## UWP Desktop
 ![](art/embedding-uwp-desktop.gif)
+
 In this demo we placed the History Page inside a flyOut Frame. Call `Forms.Init(e)` prior.
-```var x = new History().CreateFrameworkElement();
+
+```
+var x = new History().CreateFrameworkElement();
 ```
