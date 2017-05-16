@@ -1,7 +1,7 @@
 # Microsoft Build 2017 - Weather Sample - Xamarin.Forms Embedding (PREVIEW)
 This sample shows a shared Xamarin.Forms UI being embedded into non-Xamarin.Forms iOS, Android and UWP applications. With this method developers can use as much or as little Xamarin.Forms in their application as desired.
 
-The [History.xaml](Weather/Weather.Forms/History.xaml) demonstrates using an image and custom fonts across native applications.
+The [HistoryPage.xaml](Weather/Weather.Forms/HistoryPage.xaml) demonstrates using an image and custom fonts across native applications.
 
 Xamarin.Forms services such as DependencyService and MessagingCenter work with the exception of Navigation. Binding also works when setting the context. 
 
@@ -20,7 +20,7 @@ public void ShowHistory()
         // #1 Initialize Forms.Init(Context, Bundle)
         Forms.Init(this, null); 
         // #2 Use it with CreateFragment(Context)
-        _history = new History().CreateFragment(this);
+        _history = new HistoryPage().CreateFragment(this);
     }
 
 
@@ -45,7 +45,7 @@ public void ShowHistory()
     if (_history == null)
     {
         // #2 Use it
-        _history = new History().CreateViewController();
+        _history = new HistoryPage().CreateViewController();
     }
 
     // And push it onto the navigation stack
@@ -59,5 +59,5 @@ public void ShowHistory()
 In this demo we placed the History Page inside a flyOut Frame. Call `Forms.Init(e)` prior.
 
 ```
-var x = new History().CreateFrameworkElement();
+var x = new HistoryPage().CreateFrameworkElement();
 ```
