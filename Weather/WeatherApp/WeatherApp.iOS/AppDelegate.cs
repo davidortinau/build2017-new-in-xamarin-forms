@@ -35,9 +35,9 @@ namespace WeatherApp.iOS
 
 		public void ShowAbout()
 		{
-			// Create a XF History page as a view controller
 			if (_history == null)
 			{
+                // #2 Use it
 				_history = new History().CreateViewController();
 			}
 
@@ -47,7 +47,8 @@ namespace WeatherApp.iOS
 
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
-			Forms.Init();
+            // #1 Initialize
+            Forms.Init();
 
 			Shared = this;
 			_window = new UIWindow(UIScreen.MainScreen.Bounds);
@@ -59,8 +60,7 @@ namespace WeatherApp.iOS
 
 			_weatherController = Storyboard.InstantiateInitialViewController() as ViewController;
 			_navigation = new UINavigationController(_weatherController);
-
-			// Listen for lookup requests from the history tracker
+            
 			MessagingCenter.Subscribe<History, string>(this, History.HistoryItemSelected, (history, postalCode) =>
 			{
 				_navigation.PopToRootViewController(true);

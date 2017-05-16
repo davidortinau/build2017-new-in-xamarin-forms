@@ -17,20 +17,15 @@ using Weather.Forms;
 using Xamarin.Forms;
 using Page = Windows.UI.Xaml.Controls.Page;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace WeatherApp.UWP
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
 
-			// Crate a XF History page and drop it into a flyout from the command bar
+			// Create a XF History page and drop it into a flyout from the command bar
 	        var x = new History().CreateFrameworkElement();
 			HistoryFlyout.Content = x;
 

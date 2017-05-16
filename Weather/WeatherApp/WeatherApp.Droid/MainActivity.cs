@@ -46,11 +46,12 @@ namespace WeatherApp.Droid
 
 		public void ShowHistory()
 		{
-			// Create a XF History page as a fragment
 			if (_history == null)
 			{
+                // #1 Initialize
 				Forms.Init(this, null);
-				_history = new History().CreateFragment(this);
+                // #2 Use it
+                _history = new History().CreateFragment(this);
 			}
 
 
