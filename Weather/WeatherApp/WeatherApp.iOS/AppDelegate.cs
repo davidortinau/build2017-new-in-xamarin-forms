@@ -26,14 +26,14 @@ namespace WeatherApp.iOS
 			{
 				var btn = new UIButton(new CGRect(0, 0, 88, 44));
 				btn.SetTitle("History", UIControlState.Normal);
-				btn.TouchUpInside += (sender, e) => ShowAbout();
+				btn.TouchUpInside += (sender, e) => ShowHistory();
 
 				_aboutButton = new UIBarButtonItem(btn);
 			}
 			return _aboutButton;
 		}
 
-		public void ShowAbout()
+		public void ShowHistory()
 		{
 			if (_history == null)
 			{
