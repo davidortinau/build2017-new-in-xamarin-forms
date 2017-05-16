@@ -38,7 +38,7 @@ namespace WeatherApp.iOS
 			if (_history == null)
 			{
                 // #2 Use it
-				_history = new History().CreateViewController();
+				_history = new HistoryPage().CreateViewController();
 			}
 
 			// And push it onto the navigation stack
@@ -61,7 +61,7 @@ namespace WeatherApp.iOS
 			_weatherController = Storyboard.InstantiateInitialViewController() as ViewController;
 			_navigation = new UINavigationController(_weatherController);
             
-			MessagingCenter.Subscribe<History, string>(this, History.HistoryItemSelected, (history, postalCode) =>
+			MessagingCenter.Subscribe<HistoryPage, string>(this, HistoryPage.HistoryItemSelected, (history, postalCode) =>
 			{
 				_navigation.PopToRootViewController(true);
 				_weatherController.SetPostalCode(postalCode);

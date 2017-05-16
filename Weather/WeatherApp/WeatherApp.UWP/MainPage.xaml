@@ -68,7 +68,7 @@
         </ScrollViewer>
 
         <CommandBar Grid.Row="3">
-            <AppBarButton Icon="List" Label="History">
+            <AppBarButton Icon="List" Label="Your Places">
                 <AppBarButton.Flyout>
                     <Flyout x:Name="Flyout">
                         <Frame Height="400" Width="300" x:Name="HistoryFlyout"></Frame>

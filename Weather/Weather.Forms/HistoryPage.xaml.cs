@@ -8,11 +8,11 @@ using Xamarin.Forms.Xaml;
 namespace Weather.Forms
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class History : ContentPage
+	public partial class HistoryPage : ContentPage
 	{
 		public const string HistoryItemSelected = "HistoryItemSelected";
 
-		public History()
+		public HistoryPage()
 		{
 			InitializeComponent();
 

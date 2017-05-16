@@ -26,11 +26,11 @@ namespace WeatherApp.UWP
             this.InitializeComponent();
 
 			// Create a XF History page and drop it into a flyout from the command bar
-	        var x = new History().CreateFrameworkElement();
+	        var x = new HistoryPage().CreateFrameworkElement();
 			HistoryFlyout.Content = x;
 
 			// Listen for lookup requests from the history tracker
-			MessagingCenter.Subscribe<History, string>(this, History.HistoryItemSelected, (history, postalCode) =>
+			MessagingCenter.Subscribe<HistoryPage, string>(this, HistoryPage.HistoryItemSelected, (history, postalCode) =>
 			{
 				Flyout.Hide();
 				SetPostalCode(postalCode);

@@ -51,7 +51,7 @@ namespace WeatherApp.Droid
                 // #1 Initialize
 				Forms.Init(this, null);
                 // #2 Use it
-                _history = new History().CreateFragment(this);
+                _history = new HistoryPage().CreateFragment(this);
 			}
 
 
@@ -76,7 +76,7 @@ namespace WeatherApp.Droid
 				button.Click += Button_Click;
 
 				// Listen for lookup requests from the history tracker
-				MessagingCenter.Subscribe<History, string>(this, History.HistoryItemSelected, (history, postalCode) =>
+				MessagingCenter.Subscribe<HistoryPage, string>(this, HistoryPage.HistoryItemSelected, (history, postalCode) =>
 				{
 					Activity.FragmentManager.PopBackStack();
 					_lastPostalCode = postalCode;
