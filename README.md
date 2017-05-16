@@ -1,6 +1,8 @@
 # Microsoft Build 2017 - Weather Sample - Xamarin.Forms Embedding (PREVIEW)
 This sample shows a shared Xamarin.Forms UI being embedded into non-Xamarin.Forms iOS, Android and UWP applications. With this method developers can use as much or as little Xamarin.Forms in their application as desired.
 
+The [History.xaml](Weather/Weather.Forms/History.xaml) demonstrates using an image and custom fonts across native applications.
+
 Xamarin.Forms services such as DependencyService and MessagingCenter work with the exception of Navigation. Binding also works when setting the context. 
 
 **NOTE:** This is an early preview and not all features have been evaluated.
