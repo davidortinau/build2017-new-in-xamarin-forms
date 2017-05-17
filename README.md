@@ -7,6 +7,12 @@ Xamarin.Forms services such as DependencyService and MessagingCenter work with t
 
 **NOTE:** This is an early preview and not all features have been evaluated.
 
+## Get the 3.0-preview NuGet
+This is very early and not merged into Xamarin.Forms master. To get the package, add this feed to your NuGet sources:
+* Add the source: <code>https://www.myget.org/F/xamarinforms-dev/api/v3/index.json</code>
+* Check Pre-Release
+* Select and install the package with the feature name "Embedding". <code>3.0.0.100-embeddingpreview</code>
+
 [Watch the presentation](https://channel9.msdn.com/events/Build/2017/B8099) and [view the slides](https://sec.ch9.ms/sessions/c1f9c808-82bc-480a-a930-b340097f6cc1/build/2017/B8099.pptx) on Channel 9.
 
 ## Android
