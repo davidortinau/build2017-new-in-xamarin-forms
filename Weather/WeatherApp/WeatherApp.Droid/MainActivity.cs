@@ -57,7 +57,6 @@ namespace WeatherApp.Droid
 
 			// And push that fragment onto the stack
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
-
 			ft.AddToBackStack(null);
 			ft.Replace(Resource.Id.fragment_frame_layout, _history, "history");
 			
@@ -132,7 +131,7 @@ namespace WeatherApp.Droid
 
 				if (!String.IsNullOrEmpty(zipCodeEntry.Text))
 				{
-					Weather weather = await Core.GetWeather(zipCodeEntry.Text);
+					Weather weather = await Core.GetWeatherByCity(zipCodeEntry.Text);
 					if (weather != null)
 					{
 						View.FindViewById<TextView>(Resource.Id.locationText).Text = weather.Title;

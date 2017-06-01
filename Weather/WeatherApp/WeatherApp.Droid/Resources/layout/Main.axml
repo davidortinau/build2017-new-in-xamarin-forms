@@ -4,6 +4,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px" android:id="@+id/fragment_frame_layout">
-
-</FrameLayout>
+    android:minHeight="25px"
+    android:id="@+id/fragment_frame_layout" />
