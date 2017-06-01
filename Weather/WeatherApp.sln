@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26510.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Droid", "WeatherApp\WeatherApp.Droid\WeatherApp.Droid.csproj", "{F90BF25A-D3AA-491A-B29A-17F52D5678D6}"
 EndProject
@@ -178,6 +178,8 @@ Global
 		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|ARM.Build.0 = Debug|ARM
 		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|ARM.Deploy.0 = Debug|ARM
 		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|iPhone.ActiveCfg = Debug|x86
+		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|iPhone.Build.0 = Debug|x86
+		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|iPhone.Deploy.0 = Debug|x86
 		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
 		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|x64.ActiveCfg = Debug|x64
 		{0C2BDF9E-3953-43B1-A30F-7A6AEF0127E6}.Debug|x64.Build.0 = Debug|x64

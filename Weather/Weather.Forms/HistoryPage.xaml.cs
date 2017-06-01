@@ -33,7 +33,7 @@ namespace Weather.Forms
 				return;
 			}
 
-			MessagingCenter.Send(this, HistoryItemSelected, historyItem.PostalCode);
+			MessagingCenter.Send(this, HistoryItemSelected, historyItem.City);
 		}
 	}
 
@@ -52,16 +52,34 @@ namespace Weather.Forms
 
 		public static ObservableCollection<HistoryItem> LocationHistory = new ObservableCollection<HistoryItem>
 		{
-			new HistoryItem(DateTime.Now.AddHours(-4), "98101", "Seattle", "day200"),
-			new HistoryItem(DateTime.Now.AddHours(-3), "94016", "San Francisco", "day800"),
-			new HistoryItem(DateTime.Now.AddHours(-2), "63101", "Saint Louis", "day800"),
-			new HistoryItem(DateTime.Now.AddHours(-1), "02110", "Boston", "day800"),
-			new HistoryItem(DateTime.Now.AddMinutes(-42), "80203", "Denver", "day800"),
-		};
+			//new HistoryItem(DateTime.Now.AddHours(-4), "98101", "Seattle", "day200"),
+			//new HistoryItem(DateTime.Now.AddHours(-3), "94016", "San Francisco", "day800"),
+			//new HistoryItem(DateTime.Now.AddHours(-2), "63101", "Saint Louis", "day800"),
+			//new HistoryItem(DateTime.Now.AddHours(-1), "02110", "Boston", "day800"),
+			////new HistoryItem(DateTime.Now.AddMinutes(-42), "80203", "Denver", "day800"),
+
+            new HistoryItem () { DateTime = DateTime.Now , City="London,uk" , LocationName = "London", Icon="day800" },
+            new HistoryItem () { DateTime = DateTime.Now , City="Seattle,us" , LocationName = "Seattle", Icon="day800" },
+
+new HistoryItem () { DateTime = DateTime.Now , City="Hyderabad,in" , LocationName = "Hyderabad", Icon="day800" },
+
+new HistoryItem () { DateTime = DateTime.Now , City="Munich,de" , LocationName = "Munich", Icon="day800" },
+
+new HistoryItem () { DateTime = DateTime.Now , City="Shanghai,in" , LocationName = "Shanghai", Icon="day800" },
+
+
+          
+
+        };
 	}
 
 	public class HistoryItem
 	{
+        internal HistoryItem ()
+        {
+
+        }
+
 		internal HistoryItem(DateTime dateTime, string postalCode, string locationName, string icon)
 		{
 			DateTime = dateTime;
@@ -78,6 +96,7 @@ namespace Weather.Forms
 		public string PostalCode { get; set; }
 		public string LocationName { get; set; }
 		public string Icon { get; set; }
+        public string City { get; set;  }
 
 		private string IconToWeatherIcon(string icon)
 		{
