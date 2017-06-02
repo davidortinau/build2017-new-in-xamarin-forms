@@ -26,7 +26,7 @@
                     </OnIdiom.Desktop>
                 </OnIdiom>
             </StackLayout.Margin>
-            <BoxView HeightRequest="120"/>
+            <BoxView HeightRequest="20"/>
             <Label Text="Your Places">
                 <Label.TextColor>
                         <OnPlatform x:TypeArguments="Color">
