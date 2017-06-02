@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Linq;
 
 namespace Weather.Forms
 {
@@ -47,7 +48,7 @@ namespace Weather.Forms
 		public HistoryRecorder()
 		{
 			MessagingCenter.Subscribe<HistoryRecorder, HistoryItem>(this, LocationSubmitted,
-				(recorder, historyItem) => LocationHistory.Add(historyItem));
+                                                                    (recorder, historyItem) => AddHistory(historyItem));
 		}
 
 		public static ObservableCollection<HistoryItem> LocationHistory = new ObservableCollection<HistoryItem>
@@ -58,6 +59,14 @@ namespace Weather.Forms
 			new HistoryItem(DateTime.Now.AddHours(-1), "02110", "Boston", "day800"),
 			new HistoryItem(DateTime.Now.AddMinutes(-42), "80203", "Denver", "day800"),
 		};
+
+        void AddHistory(HistoryItem historyItem)
+        {
+            if (LocationHistory.Count(x => x.LocationName.ToLower() == historyItem.LocationName.ToLower()) == 0)
+            {
+                LocationHistory.Add(historyItem);
+            }
+        }
 	}
 
 	public class HistoryItem

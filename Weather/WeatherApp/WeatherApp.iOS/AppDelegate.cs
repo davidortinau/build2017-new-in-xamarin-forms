@@ -18,7 +18,7 @@ namespace WeatherApp.iOS
 		UINavigationController _navigation;
 		UIBarButtonItem _aboutButton;
 		ViewController _weatherController;
-		UIViewController _history;
+        UIViewController _historyViewController;
 
 		public UIBarButtonItem CreateAboutButton()
 		{
@@ -35,14 +35,14 @@ namespace WeatherApp.iOS
 
 		public void ShowHistory()
 		{
-			if (_history == null)
+			if (_historyViewController == null)
 			{
                 // #2 Use it
-				_history = new HistoryPage().CreateViewController();
+				_historyViewController = new HistoryPage().CreateViewController();
 			}
 
 			// And push it onto the navigation stack
-			_navigation.PushViewController(_history, true);
+			_navigation.PushViewController(_historyViewController, true);
 		}
 
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
