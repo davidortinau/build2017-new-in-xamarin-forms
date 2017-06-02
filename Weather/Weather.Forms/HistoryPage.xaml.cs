@@ -8,35 +8,35 @@ using System.Linq;
 
 namespace Weather.Forms
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HistoryPage : ContentPage
+[XamlCompilation(XamlCompilationOptions.Compile)]
+public partial class HistoryPage : ContentPage
+{
+	public const string HistoryItemSelected = "HistoryItemSelected";
+
+	public HistoryPage()
 	{
-		public const string HistoryItemSelected = "HistoryItemSelected";
+		InitializeComponent();
 
-		public HistoryPage()
-		{
-			InitializeComponent();
+		HistoryItems.ItemsSource = HistoryRecorder.LocationHistory;
+		HistoryItems.ItemTapped += HistoryItemsOnItemTapped;
 
-			HistoryItems.ItemsSource = HistoryRecorder.LocationHistory;
-			HistoryItems.ItemTapped += HistoryItemsOnItemTapped;
-
-			BindingContext = this;
-		}
-
-		public string PlatformName => $"{Device.RuntimePlatform} ";
-
-		private void HistoryItemsOnItemTapped(object sender, ItemTappedEventArgs itemTappedEventArgs)
-		{
-			var historyItem = itemTappedEventArgs.Item as HistoryItem;
-
-			if (historyItem == null)
-			{
-				return;
-			}
-
-			MessagingCenter.Send(this, HistoryItemSelected, historyItem.PostalCode);
-		}
+		BindingContext = this;
 	}
+
+	public string PlatformName => $"{Device.RuntimePlatform} ";
+
+	private void HistoryItemsOnItemTapped(object sender, ItemTappedEventArgs itemTappedEventArgs)
+	{
+		var historyItem = itemTappedEventArgs.Item as HistoryItem;
+
+		if (historyItem == null)
+		{
+			return;
+		}
+
+		MessagingCenter.Send(this, HistoryItemSelected, historyItem.PostalCode);
+	}
+}
 
 	public class HistoryRecorder
 	{

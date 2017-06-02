@@ -49,9 +49,13 @@
 	<key>CFBundleName</key>
 	<string>Weather</string>
 	<key>UIAppFonts</key>
-  <array>
-	  <string>FontAwesome.ttf</string>
-    <string>WeatherIcons.ttf</string>
-  </array>
+	<array>
+		<string>FontAwesome.ttf</string>
+		<string>WeatherIcons.ttf</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

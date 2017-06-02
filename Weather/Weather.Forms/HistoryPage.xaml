@@ -51,7 +51,7 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition Width="100"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding WeatherIcon}" Grid.Column="0" VerticalTextAlignment="Center" TextColor="White">
+                                <Label Text="{Binding WeatherIcon}" FontSize="18" Grid.Column="0" VerticalTextAlignment="Center" TextColor="White">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="UWP" Value="/Assets/WeatherIcons.ttf#Weather Icons"></On>
@@ -59,12 +59,6 @@
                                             <On Platform="Android" Value="WeatherIcons.ttf#Weather Icons"></On>
                                         </OnPlatform>
                                     </Label.FontFamily>
-                                    <Label.FontSize>
-                                        <OnPlatform x:TypeArguments="x:Double">
-                                            <On Platform="iOS" Value="18"></On>
-                                            <On Platform="WinRT, UWP, Android" Value="18"></On>
-                                        </OnPlatform>
-                                    </Label.FontSize>
                                 </Label>
                                 <Label Text="{Binding LocationName}" Grid.Column="1" VerticalOptions="Center" TextColor="White">
                                     <Label.FontSize>

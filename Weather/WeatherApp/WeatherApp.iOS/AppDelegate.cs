@@ -3,11 +3,10 @@ using Foundation;
 using UIKit;
 using Weather.Forms;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace WeatherApp.iOS
 {
-	// The UIApplicationDelegate for the application. This class is responsible for launching the
-	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
 	[Register ("AppDelegate")]
 	public class AppDelegate : UIApplicationDelegate
 	{
@@ -58,6 +57,11 @@ namespace WeatherApp.iOS
 				TextColor = UIColor.White
 			});
 
+
+            UINavigationBar.Appearance.Translucent = false;
+            UINavigationBar.Appearance.BarTintColor = Color.FromHex("#002050").ToUIColor();
+            UINavigationBar.Appearance.TintColor = UIColor.White;
+
 			_weatherController = Storyboard.InstantiateInitialViewController() as ViewController;
 			_navigation = new UINavigationController(_weatherController);
             
@@ -72,6 +76,8 @@ namespace WeatherApp.iOS
 			
 			return true;
 		}
+
+
 	}
 }
 
